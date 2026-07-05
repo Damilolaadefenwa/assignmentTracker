@@ -1,0 +1,101 @@
+// 1. This is the base partial file is where you
+// set the foundation for your page 
+
+@use "colors" as *;
+@use "mixins" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $font-color;
+}
+
+body {
+    background-color: $body-bg;
+    min-height: 100vh;
+    @include flexCenter;
+}
+
+.main {
+    background-color: $main-bg;
+    width: 100%;
+    max-width: 800px;
+    min-height: 100vh;
+    padding: 1rem;
+    overflow-y: hidden;
+    @include flexStart;
+    flex-direction: column;
+
+    @include mq(800px) {
+        min-height: 95vh;
+        max-height: 95vh;
+        border: 1px solid $border-color;
+        box-shadow: 5px 10px 8px $shadow-color;
+    }
+}
+
+section {
+    width: 100%;
+}
+
+a {
+    color: $link-color;
+    font-weight: bold;
+}
+
+a:hover {
+    color: $link-hover;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Style for the error.php file */
+.message {
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: $inverse-font-color;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px $shadow-color;
+    text-align: center;
+}
+
+.message h2 {
+    color: $header-color;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.message p {
+    font-size: 1.2rem;
+    color: $font-color;
+}
+
+.message-div {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.message-div a {
+    background-color: $link-color;
+    color: $inverse-font-color;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.message-div a:hover {
+    background-color: $link-hover;
+}
